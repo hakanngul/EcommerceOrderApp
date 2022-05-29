@@ -6,7 +6,7 @@ namespace UdemySiparis.Models
 {
     public class AppUserModel : IdentityUser
     {
-        [Required] public string FullName { get; set; } = string.Empty;
+        [Required] public string FullName { get; set; }
         public string Address { get; set; } = string.Empty;
         public string PostalCode { get; set; } = string.Empty;
         public string MobilePhone { get; set; } = string.Empty;
