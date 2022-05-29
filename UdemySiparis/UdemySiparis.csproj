@@ -20,4 +20,12 @@
     <ProjectReference Include="..\UdemySiparis.Data\UdemySiparis.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Areas\Admin\Views\Category\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Areas\Admin\Views\Category\Index.cshtml" />
+  </ItemGroup>
+
 </Project>

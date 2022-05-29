@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CategoryModel>
+
+<div class="container">
+    <div class="row">
+    @if (Model.Any())
+    {
+        <div class="col-6">
+
+            <h2>Kategori Listesi</h2>
+            
+        </div>
+        <div class="col-6">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+                <span>Yeni Kategori Ekle</span>
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="col-6">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+                <span>Yeni Kategori Ekle</span>
+            </a>
+        </div>
+        <div class="col-6"></div>
+    }
+    </div>
+    @if(Model.Any()){
+        <div class="row">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Kategori Adı</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var category in Model)
+                {
+                    <tr>
+                        <td>@category.Name</td>
+                        <td>
+                            <a asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id">Güncelle</a> |
+                            <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id">Sil</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <h1>Her hangi bir kategori bulunmamaktadır.</h1>
+    }
+</div>

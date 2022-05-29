@@ -22,4 +22,9 @@
     <ProjectReference Include="..\UdemySiparis.Models\UdemySiparis.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repository\UnitOfWorks\Interfaces\" />
+    <Folder Include="Repository\UnitOfWorks\Class\" />
+  </ItemGroup>
+
 </Project>

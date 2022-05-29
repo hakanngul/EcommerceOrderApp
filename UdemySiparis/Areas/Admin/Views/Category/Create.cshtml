@@ -1,0 +1,21 @@
+﻿@{
+}
+@model CategoryModel
+
+<form method="post">
+    <h2>Yeni Kategori Oluştur</h2>
+
+    <div class="row">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+    <div class="row my-2">
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <a asp-controller="Category" asp-action="Index" class="btn btn-danger">Geri Dön</a>
+        </div>
+        <div class="col-6">
+        </div>
+    </div>
+
+</form>
